@@ -1,0 +1,18 @@
+DATASETS:
+  TRAIN: "./tmp/finetune/"
+  TRAIN_SUFFIX: "recon."
+  VALID: "/Share/UserHome/huangweilin/Work/deeptomo_project/IsoNet-master/bin/corrected_tomos/grid3_4_1_defocus4_Cor2_bin6_rotx_corrected.mrc"
+  IS_VALID: True
+  VAL_CROP: (50, 150, 250, 450, 50, 250)
+  TRAIN_SAVE: "./tmp/train/"
+  VALID_SAVE: "./tmp/valid/"
+DATALOADER:
+  NUM_WORKERS: 16
+SOLVER:
+  IMS_PER_BATCH: 6
+  MAX_EPOCH: 4
+  ITER_PER_EPOCH: 40
+MODEL:
+  DEVICE: [2,3,4,5,6,7]
+  WEIGHT: "./output/pretrained_model/model.pth"
+OUTPUT_DIR: "./output/finetune/"

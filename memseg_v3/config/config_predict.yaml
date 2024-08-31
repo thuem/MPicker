@@ -1,0 +1,11 @@
+DATASETS:
+  TEST: "/Share/UserHome/hwang/tomo_data/chloroplast_titan3_33000x/c3_chloroplast_sta/tomogram/isonet/corrected_tomos/grid3_5*_corrected.mrc"
+  TEST_SAVE: "./tmp/"
+DATALOADER:
+  NUM_WORKERS: 16
+TEST:
+  IMS_PER_BATCH: 12
+MODEL:
+  DEVICE: [2,3,4,5,6,7]
+  WEIGHT: "./output/pretrained_model/model.pth"
+OUTPUT_TEST_DIR: "./result/test/"
